@@ -1,52 +1,27 @@
-import { Form, Container, Col, Row, Button } from 'react-bootstrap';
+import { Route } from 'react-router-dom';
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import RecipeCreation from './pages/RecipeCreate';
+import Register from './pages/Register';
 
 
 const App = () => {
   return (
-    <div className="App">
+   <div>
+      <Route exact path='/' component={Home} />
 
-<Container>
-                <Row>
-                    <Col></Col>
-                    <Col>
-                        {" "}
-                        <Form>
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Label>Email address</Form.Label>
-                                <Form.Control
-                                    type="email"
-                                    placeholder="Enter email"
-                                />
-                                <Form.Text className="text-muted">
-                                    We'll never share your email with anyone
-                                    else.
-                                </Form.Text>
-                            </Form.Group>
+      <Route exact path='/login' component={Login} />
 
-                            <Form.Group controlId="formBasicPassword">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control
-                                    type="password"
-                                    placeholder="Password"
-                                />
-                            </Form.Group>
-                            <Form.Group controlId="formBasicCheckbox">
-                                <Form.Check
-                                    type="checkbox"
-                                    label="Check me out"
-                                />
-                            </Form.Group>
-                            <Button variant="primary" type="submit">
-                                Submit
-                            </Button>
-                        </Form>
-                    </Col>
-                    <Col></Col>
-                </Row>
-            </Container>
+      <Route exact path='/create-recipe' component={RecipeCreation} />
 
-    </div>
+      <Route exact path='/register' component={Register} />
+  
+
+  </div>
+    
   );
 }
 
