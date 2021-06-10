@@ -1,7 +1,8 @@
-import { Route } from 'react-router-dom';
-
-
+// styles
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../assets/styles/loginForm.css';
+
+import { Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import RecipeCreation from './pages/RecipeCreate';

@@ -1,9 +1,11 @@
+import RegisterForm from "../ui/registerForm"
+
 const Register = () => {
-    return (
-        <div>
-            <p>Register page</p>
-        </div>
-    )
-}
+  return (
+    <div>
+      <RegisterForm/>
+    </div>
+  );
+};
 
 export default Register;
