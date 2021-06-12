@@ -1,16 +1,13 @@
-import { Form, Container, Col, Row, Button } from 'react-bootstrap';
+import { Form, Col, Row, Button, Container } from "react-bootstrap";
 
-const Home = () => {
+const Forma = () => {
     return (
-        <div className='home'>
-            <p>Home page</p>
-
-
-            <Container>
+        <Container>
+            {
                 <Row>
                     <Col></Col>
                     <Col>
-                        
+                        {" "}
                         <Form>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
@@ -44,9 +41,9 @@ const Home = () => {
                     </Col>
                     <Col></Col>
                 </Row>
-            </Container>
-        </div>
-    )
-}
+            }
+        </Container>
+    );
+};
 
-export default Home;
+export default Forma;
