@@ -5,11 +5,11 @@ const RegisterForm = () => {
   return (
     <Container>
         <Row>
-          <Col sm={4}>
-            <h3 id="orangeTitle">Create your</h3><h3> account</h3>
+          <Col md={4}>
+            <h3 id="orangeTitle">Create your <p id="blackTitle"> account</p></h3 >
             <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
           </Col>
-          <Col sm={8}>
+          <Col md={8}>
           
           <div className="registerForm">
       <Form>

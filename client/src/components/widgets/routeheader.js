@@ -1,12 +1,12 @@
-import { Col, Row, Container } from "react-bootstrap";
+import {Container } from "react-bootstrap";
 
 const RouteHeader = (props) => {
   return (
     <>
       <Container className="routeHeader">
-        <div className='baze'>
-          <div>{props.title}</div>
-          <div>
+        <div className='title-header'>
+         <div className="paragraph-title"> <p> {props.title} </p> </div>
+          <div className="line-container">
             <hr />
           </div>
         </div>
