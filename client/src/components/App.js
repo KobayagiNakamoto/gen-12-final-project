@@ -1,29 +1,45 @@
 // styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/styles/loginForm.css';
+import '../assets/styles/routeHeader.css'
 
-import { Route } from 'react-router-dom';
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Nav from "../components/widgets/navmenu/nav"
+import Error from "../components/ui/Messages/error"
 import Home from './pages/Home';
 import Login from './pages/Login';
-import RecipeCreation from './pages/RecipeCreate';
 import Register from './pages/Register';
+import Create from './pages/RecipeCreate';
 
 
 const App = () => {
   return (
-   <div>
-      <Route exact path='/' component={Home} />
-
-      <Route exact path='/login' component={Login} />
-
-      <Route exact path='/create-recipe' component={RecipeCreation} />
-
-      <Route exact path='/register' component={Register} />
-  
-
-  </div>
-    
+      <div className="App">
+          <Router>
+              <div>
+                  <Nav />
+                  <Switch>
+                      <Route exact path="/">
+                          <Home />
+                      </Route>
+                      <Route path="/login">
+                          <Login />
+                      </Route>
+                      <Route path="/register">
+                          <Register />
+                      </Route>
+                      <Route path="/create">
+                          <Create />
+                      </Route>
+                      <Route path="*">
+                          <Error />
+                      </Route>
+                  </Switch>
+              </div>
+          </Router>
+      </div>
   );
-}
+};
 
 export default App;

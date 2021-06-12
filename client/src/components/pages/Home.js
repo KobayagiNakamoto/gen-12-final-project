@@ -1,9 +1,9 @@
 //import { Form, Container, Col, Row, Button } from 'react-bootstrap';
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div className='home'>
-            <p>Home page</p>
+            <p>Home page {props.title}</p>
         </div>
     )
 }

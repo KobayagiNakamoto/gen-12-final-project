@@ -1,0 +1,33 @@
+@import "global.css";
+
+.routeHeader {
+  display: flex;
+  justify-content: center;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    var(--unnamed-font-size-36) / var(--unnamed-line-spacing-48)
+    var(--unnamed-font-family-roboto-slab);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--green);
+  text-align: left;
+  font: normal normal bold 36px/48px Roboto Slab;
+  letter-spacing: 0px;
+  color: #96bb36;
+  opacity: 1;
+}
+
+.routeHeader hr {
+  border: 1px solid var(--lightgrey);
+  border: 1px solid #d8d8d8;
+  opacity: 1;
+  width: 100%;
+  width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1.2rem;
+}
+
+.baze {
+    width: 100%;
+    display: flex;
+
+}
