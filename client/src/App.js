@@ -4,6 +4,8 @@ import Register from "./Layouts/Register";
 import Create from "./Layouts/Create";
 import Error from "./Layouts/Error";
 import Header from "./components/header";
+import Nav from "./components/Nav";
+import Logo from "./components/Logo/Logo";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -13,6 +15,8 @@ const App = () => {
         <div className="App">
             <Router>
                 <div>
+                    {/* <Logo /> */}
+                    {/* <Nav /> */}
                     <Header />
 
                     <Switch>

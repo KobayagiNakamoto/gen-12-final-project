@@ -1,25 +1,37 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
-const Login = () => {
+const Navigation = () => {
     return (
         <nav>
             <ul style={{ display: "flex", marginRight: "2rem" }}>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/login">Login</Link>
-                </li>
-                <li>
-                    <Link to="/register">Register</Link>
-                </li>
-                <li>
-                    <Link to="/create">Create</Link>
-                </li>
+                <div className="nav-item">
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <span className="li-span"></span>
+                </div>
+                <div className="nav-item">
+                    <li>
+                        <Link to="/login">Login</Link>
+                    </li>
+                    <span className="li-span"></span>
+                </div>
+                <div className="nav-item">
+                    <li>
+                        <Link to="/register">Register</Link>
+                    </li>
+                    <span className="li-span"></span>
+                </div>
+                <div className="nav-item">
+                    <li>
+                        <Link to="/create">Create</Link>
+                    </li>
+                    <span className="li-span"></span>
+                </div>
             </ul>
         </nav>
     );
 };
 
-export default Login;
+export default Navigation;

@@ -1,0 +1,16 @@
+.Logo {
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+    font-size: 70px;
+    color: var(--darkgrey);
+}
+
+.Span {
+    font-family: "Roboto Slab", serif;
+    font-weight: 900;
+    font-size: 17px;
+    color: var(--orange);
+    position: absolute;
+    top: 70%;
+    left: 18%;
+}
