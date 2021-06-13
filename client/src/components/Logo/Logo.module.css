@@ -14,3 +14,7 @@
     top: 70%;
     left: 18%;
 }
+
+.White {
+    color: var(--softwhite);
+}

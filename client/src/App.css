@@ -24,20 +24,16 @@ html {
 
 body {
     background-color: var(--softwhite);
+    /* width: 1400px;
+    margin: 0 auto; */
     font-family: var(--font-family);
     font-weight: 500;
     line-height: 1.6;
-    /* width: 1920px;
-    height: 2065px; */
 }
 
 ::selection {
     background-color: var(--green);
     color: #fff;
-}
-
-ul {
-    /* display: flex; */
 }
 
 li {
@@ -48,9 +44,7 @@ li {
 
 a:link,
 a:visited {
-    color: var(--midgrey);
     text-decoration: none;
-    /* align-self: flex-end; */
 }
 
 a:active,
@@ -59,6 +53,10 @@ a:hover {
 .nav-item {
     display: flex;
     margin-right: 15px;
+}
+
+.nav-item a {
+    color: var(--midgrey);
 }
 
 .nav-item span {
@@ -77,4 +75,8 @@ a:hover {
 h1 {
     text-align: center;
     margin-bottom: 30px;
+}
+
+.header-btn a {
+    margin-right: 10px;
 }

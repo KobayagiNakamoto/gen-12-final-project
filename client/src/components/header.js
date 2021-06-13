@@ -1,20 +1,27 @@
-import { Link } from "react-router-dom";
-import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Logo from "./Logo/Logo";
 import Nav from "./Nav";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Button from "./Button/Button";
 
 const Header = () => {
-    //Stil za kopcinja na linkovi
-    const linkStyle = {
-        color: "gray",
-        fontSize: "20px",
-    };
-
     return (
-        <div style={{ display: "flex",justifyContent:"space-around", alignItems: "baseline" }}>
+        <div
+            style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "baseline",
+            }}
+        >
             <Logo />
             <Nav />
+            <div className="header-btn">
+                <Button btn={"White"} text={"Sing In"} where={"login"} />
+                <Button
+                    btn={"Green"}
+                    text={"Create Account"}
+                    where={"register"}
+                />
+            </div>
         </div>
     );
 };

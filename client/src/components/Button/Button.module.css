@@ -1,0 +1,19 @@
+.White {
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--midgrey);
+}
+
+.Green {
+    padding: 7px 20px;
+    border-radius: 5px;
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    color: var(--softwhite) ;
+}
+
+
+
+.Green:hover {
+    filter:brightness(105%);
+}

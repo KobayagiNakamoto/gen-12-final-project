@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
+import NavItem from "./NavItem/NavItem";
 import React from "react";
 
 const Navigation = () => {
     return (
         <nav>
             <ul style={{ display: "flex", marginRight: "2rem" }}>
-                <div className="nav-item">
+                <NavItem where={"/breakfast"} text={"Breakfast"} />
+                <NavItem where={"/brunch"} text={"Brunch"} />
+                <NavItem where={"/Lunch"} text={"Lunch"} />
+                <NavItem where={"/Dinner"} text={"Dinner"} />
+                {/* <div className="nav-item">
                     <li>
                         <Link to="/">Home</Link>
                     </li>
@@ -28,7 +33,7 @@ const Navigation = () => {
                         <Link to="/create">Create</Link>
                     </li>
                     <span className="li-span"></span>
-                </div>
+                </div> */}
             </ul>
         </nav>
     );

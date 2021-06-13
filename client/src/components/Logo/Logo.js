@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import style from "./Logo.module.css";
+import style, { White } from "./Logo.module.css";
 
-const Logo = () => {
+const Logo = ({ color }) => {
     return (
-        <Link to="/" style={{ position: "relative" }}>
-            <div className={style.Logo}>Baby's</div>
+        <Link to="/" style={{ position: "relative", marginLeft: "30px" }}>
+            <div className={`${style.Logo} ${color === "White" ? White : ""}`}>
+                Baby's
+            </div>
             <span className={style.Span}>food place</span>
         </Link>
     );

@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: var(--darkgrey);
+    padding: 5rem 0;
+    margin-bottom: 0;
+    /* padding: 15rem 0; */
+}
+
+.copyright {
+    margin-right: 30px;
+    color: var(--softwhite);
+    font-size: 14px;
+    align-self: flex-end;
+}
+
+footer nav li a {
+    color: var(--softwhite) !important;
+}
+footer nav span {
+    background-color: var(--softwhite) !important;
+}
