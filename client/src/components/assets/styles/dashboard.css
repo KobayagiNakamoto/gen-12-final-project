@@ -1,0 +1,49 @@
+.dashContainer {
+}
+
+.card {
+  width:25%;
+  height:auto;
+  margin: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: inline-block;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-sizing: border-box;
+}
+
+.cardText {
+  color: #a5a5a5;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.cardTitle {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: #f0972a;
+}
+
+.cardButton {
+  background-color: #96bb36;
+  border-radius: 5px;
+  opacity: 1;
+  border: none;
+  float: right;
+  margin-bottom: 0.7rem;
+}
+
+.cardFooter {
+    display: flex;
+  background-color: white;
+  border: none;
+  color: #626262;
+  font-size: 0.8rem;
+  
+}
+
+.material-icons {
+    font-size: 18px;
+}
