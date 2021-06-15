@@ -1,7 +1,7 @@
 import { Button, Card, Container } from "react-bootstrap";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import "./assets/styles/dashboard.css";
+import "../../assets/styles/dashboard.css"
 
 function Dashboard() {
   const [data, setData] = useState();
