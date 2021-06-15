@@ -19,6 +19,18 @@ const App = () => {
                     <Route exact path="/">
                         <Home />
                     </Route>
+                    <Route exact path="/lunch">
+                        <Home />
+                    </Route>
+                    <Route exact path="/dinner">
+                        <Home />
+                    </Route>
+                    <Route exact path="/brunch">
+                        <Home />
+                    </Route>
+                    <Route exact path="/breakfast">
+                        <Home />
+                    </Route>
                     <Route path="/login">
                         <Login />
                     </Route>

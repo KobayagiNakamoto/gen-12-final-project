@@ -1,9 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Logo from "./Logo/Logo";
 import Nav from "./Nav";
+import NavItem from "./NavItem/NavItem";
 import Button from "./Button/Button";
+import style from "./Header.module.css";
+import { useState } from "react";
 
 const Header = () => {
+    const [user, setUser] = useState(true);
     return (
         <div
             style={{
@@ -14,14 +18,41 @@ const Header = () => {
         >
             <Logo />
             <Nav />
-            <div className="header-btn">
+            {user ? (
+                <ul style={{ display: "flex", marginRight: "40px" }}>
+                    <NavItem
+                        className={style.Border}
+                        where={"/myrecipes"}
+                        text={"My Recipies"}
+                        col={"green"}
+                        border={true}
+                    />
+                    <NavItem
+                        where={"/myprofile"}
+                        text={"My Profile"}
+                        col={"orange"}
+                        border={true}
+                    />
+                    <NavItem where={"/lunch"} text={"Log Out"} border={true} />
+                </ul>
+            ) : (
+                <div className="header-btn">
+                    <Button btn={"White"} text={"Sing In"} where={"login"} />
+                    <Button
+                        btn={"Green"}
+                        text={"Create Account"}
+                        where={"register"}
+                    />
+                </div>
+            )}
+            {/* <div className="header-btn">
                 <Button btn={"White"} text={"Sing In"} where={"login"} />
                 <Button
                     btn={"Green"}
                     text={"Create Account"}
                     where={"register"}
                 />
-            </div>
+            </div> */}
         </div>
     );
 };

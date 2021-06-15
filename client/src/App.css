@@ -45,33 +45,14 @@ li {
 a:link,
 a:visited {
     text-decoration: none;
+    color: var(--midgrey);
 }
 
 a:active,
 a:hover {
-}
-.nav-item {
-    display: flex;
-    margin-right: 15px;
-}
-
-.nav-item a {
+    transform: translateY(-5px);
     color: var(--midgrey);
 }
-
-.nav-item span {
-    /* height: 100%; */
-    width: 7px;
-    height: 7px;
-    background-color: var(--orange);
-    border-radius: 100%;
-    align-self: center;
-}
-
-.nav-item:last-child span {
-    display: none;
-}
-
 h1 {
     text-align: center;
     margin-bottom: 30px;
