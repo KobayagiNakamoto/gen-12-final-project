@@ -19,27 +19,27 @@ const App = () => {
         <div className="App">
             <Header />
             {/* <Router> */}
-                    <Switch>
-                        <Route exact path="/">
-                            {/* <Home /> */}
-                            <Dashboard />
-                        </Route>
-                        <Route path="/login">
-                            <Login />
-                        </Route>
-                        <Route path="/register">
-                            <Register />
-                        </Route>
-                        <Route path="/create">
-                            <Create />
-                        </Route>
-                        <Route path="/dashboard">
-                            <Dashboard />
-                        </Route>
-                        <Route path="*">
-                            <Error />
-                        </Route>
-                    </Switch>
+            <Switch>
+                <Route exact path="/">
+                    {/* <Home /> */}
+                    <Dashboard />
+                </Route>
+                <Route path="/login">
+                    <Login />
+                </Route>
+                <Route path="/register">
+                    <Register />
+                </Route>
+                <Route path="/create">
+                    <Create />
+                </Route>
+                <Route path="/dashboard">
+                    <Dashboard />
+                </Route>
+                <Route path="*">
+                    <Error />
+                </Route>
+            </Switch>
             {/* </Router> */}
             <Footer />
         </div>

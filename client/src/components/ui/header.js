@@ -2,8 +2,8 @@
 import { Link } from "react-router-dom";
 
 import { useState } from "react";
-import Logo from "./../widgets/Logo";
-import Nav from "./../widgets/navmenu/nav";
+import Logo from "../widgets/Logo";
+import Nav from "../widgets/navmenu/nav";
 import Button from "../widgets/Button";
 import NavItem from "../widgets/NavItem";
 
@@ -57,7 +57,7 @@ const Header = () => {
             ) : (
                 <div className="header-btn">
                     <Button btn={"white"} text={"Sing In"} where={"login"} />
-                    <span className='or'>or</span>
+                    <span className="or">or</span>
                     <Button
                         btn={"green"}
                         text={"Create Account"}
