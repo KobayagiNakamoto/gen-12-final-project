@@ -13,8 +13,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Create from './pages/RecipeCreate';
 import Dashboard from "./ui/Dashboard"
-import Header from "./ui/header"
-
+import Header from "./ui/Header"
+import Footer from "./ui/Footer"
 
 const App = () => {
   return (
@@ -42,6 +42,7 @@ const App = () => {
                           <Error />
                       </Route>
                   </Switch>
+                  <Footer/>
               </div>
           </Router>
       </div>
