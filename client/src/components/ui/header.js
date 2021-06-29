@@ -1,47 +1,79 @@
-import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
+// import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+import { useState } from "react";
+import Logo from "../widgets/Logo";
+import Nav from "../widgets/navmenu/nav";
+import Button from "../widgets/Button";
+import NavItem from "../widgets/NavItem";
+
+import "../../assets/styles/nav.css";
 
 const Header = () => {
-    //Stil za kopcinja na linkovi
-    const linkStyle = {
-        color: "gray",
-        fontSize: "20px"
-      };
-      
+    const [user, setUser] = useState(false);
     return (
-
-    <div class="container-fluid d-inline-flex">
-    
-        {/* Kod za dropdown meni, se uste ne e dosreden*/}
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        {/* Logo */}
-        <a class="navbar-brand" href="/"><img src="https://i.pinimg.com/236x/cd/b6/cf/cdb6cfefa9df5759e1dbd2dd76f6b921--classic-simple.jpg" alt="error" width="50px" height="50px"></img></a>
-    
-        <div class="container-fluid ">
-            <nav class="navbar navbar-expand-sm justify-content-center p-3">
-                <ul class="navbar-nav" style={{ display: "flex"}}>
-                    <li class="nav-item">
-                        <a class="nav-link" style={linkStyle} href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style={linkStyle} href="/login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style={linkStyle} href="/register">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style={linkStyle} href="/create">Create</a>
-                    </li>
+        <div
+            className="header-box"
+            style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "baseline",
+            }}
+        >
+            <Logo />
+            {/* <Nav defaultActiveKey="/home" as="ul">
+                <Nav.Item as="li">
+                    <Link to="/">Home</Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                    <Link to="/login">login</Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                    <Link to="/register">register</Link>
+                </Nav.Item>
+            </Nav> */}
+            <Nav />
+            {user ? (
+                <ul style={{ display: "flex", marginRight: "40px" }}>
+                    <NavItem
+                        // className={"borderrr"}
+                        where={"/myrecipes"}
+                        text={"My Recipies"}
+                        col={"green"}
+                        border={"border"}
+                    />
+                    <NavItem
+                        where={"/myprofile"}
+                        text={"My Profile"}
+                        col={"orange"}
+                        border={"border"}
+                    />
+                    <NavItem
+                        where={"/lunch"}
+                        text={"Log Out"}
+                        border={"border"}
+                    />
                 </ul>
-            </nav>
+            ) : (
+                <div className="header-btn">
+                    <Button btn={"white"} text={"Sing In"} where={"login"} />
+                    <span className="or">or</span>
+                    <Button
+                        btn={"green"}
+                        text={"Create Account"}
+                        where={"register"}
+                    />
+                </div>
+            )}
+            {/* <div className="header-btn">
+              <Button btn={"White"} text={"Sing In"} where={"login"} />
+              <Button
+                  btn={"Green"}
+                  text={"Create Account"}
+                  where={"register"}
+              />
+          </div> */}
         </div>
-        <div class="p-3">
-            <button type="button" class="btn btn-primary">Button</button>
-        </div>
-    </div>
     );
 };
 

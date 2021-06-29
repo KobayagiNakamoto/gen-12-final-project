@@ -1,18 +1,16 @@
-import { Link } from 'react-router-dom';
-import "../../../assets/styles/nav.css"
+import NavItem from "../NavItem";
 
-const Nav = () => {
-    return(
-        <div className='navmenu-wrapper'>
-            <div className='navmenu'>
-            <Link to='/'>Home</Link>
-            <Link to='/login'>Login</Link>
-            <Link to='/register'>Register</Link>
-            <Link to='/create'>Create recipe</Link>
-            </div>
+const Navigation = () => {
+    return (
+        <nav>
+            <ul style={{ display: "flex", marginRight: "2rem" }}>
+                <NavItem where={"/breakfast"} text={"Breakfast"} />
+                <NavItem where={"/brunch"} text={"Brunch"} />
+                <NavItem where={"/lunch"} text={"Lunch"} />
+                <NavItem where={"/dinner"} text={"Dinner"} />
+            </ul>
+        </nav>
+    );
+};
 
-        </div>
-    )
-}
-
-export default Nav;
+export default Navigation;
